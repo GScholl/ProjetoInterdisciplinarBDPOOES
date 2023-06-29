@@ -133,17 +133,18 @@ public class UsuarioDAO {
             pstm.setString(1, email);
 
             rs = pstm.executeQuery();
-             ConexaoBD.fechaConexao(con,pstm,rs);
+            
             int count = 0;
             while (rs.next()) {
+                
                 count++;
             }
             if (count > 0) {
                 return true;
             }
-            
+             ConexaoBD.fechaConexao(con,pstm,rs);
         } catch (ClassNotFoundException | SQLException e) {
-
+           
             return true;
         }
         return false;

@@ -9,7 +9,6 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.text.ParseException;
 
-
 /**
  *
  * @author PC-02
@@ -22,14 +21,12 @@ public class ProjetoInterdisciplinar {
     public static void main(String[] args) throws SQLException, ClassNotFoundException, ParseException {
         Connection conexao = null;
         conexao = ConexaoBD.getConexao();
-  
+
         //RegistrarUsuario ru = new RegistrarUsuario();
         //ru.setVisible(true);
-        //LoginUsuario lu = new LoginUsuario();
-        //lu.setVisible(true);
-        DashBoard db = new DashBoard(2);
-        db.setVisible(true);
-    
+        LoginUsuario lu = new LoginUsuario();
+        lu.setVisible(true);
+
     }
 
 }
